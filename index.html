@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Food & Handicraft Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+ 
+
+
+    
+<main id="login-page" class="page active">
+  <div class="login-box">
+    <h1>Login Page</h1>
+
+    <label for="email">Email Address</label>
+    <input
+      id="email"
+      type="email"
+      placeholder="Enter email"
+      autocomplete="email"
+      required
+    />
+
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      placeholder="Enter password"
+      autocomplete="current-password"
+      required
+    />
+
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Create Account</button>
+  </div>
+</main>
+
+
+   
+    
+    <main id="home-page" class="page">
+      <header>
+        <div class="nav-bar">
+          <button onclick="showPage('home-page')">Home</button>
+          <button onclick="showPage('about-section')">About</button>
+        </div>
+        <h1>Indian Food & Handicraft Store</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+      </header>
+
+      <div class="home-content">
+        <section class="category">
+          <h2>Fine Food</h2>
+          <div class="product-grid">
+            <article class="product-card" onclick="showProduct(0)">
+              <img
+                src="./img/Homemade Chakli.png"
+                alt="Homemade Chakli"
+              />
+              <h3>Homemade Chakli</h3>
+              <p>₹150</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(1)">
+              <img
+                src="./img/Homemade Papad.jpeg"
+                alt="Homemade Papad"
+              />
+              <h3>Homemade Papad</h3>
+              <p>₹100</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(2)">
+              <img
+                src="./img/Milk Masala.jpg"
+                alt="Milk Masala"
+              />
+              <h3>Milk Masala</h3>
+              <p>₹80</p>
+              <button>View Product</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="category">
+          <h2>Handcraft Products</h2>
+          <div class="product-grid">
+            <article class="product-card" onclick="showProduct(3)">
+              <img
+                src="./img/Decorative Welcome Rangoli.jpeg"
+                alt="Decorative Welcome Rangoli"
+              />
+              <h3>Decorative Welcome Rangoli</h3>
+              <p>₹300</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(4)">
+              <img
+                src="./img/Woolen Chorang Mat Rangoli.jpeg"
+                alt="Woolen Chorand Mat Rangoli"
+              />
+              <h3>Woolen Chorang Mat Rangoli</h3>
+              <p>₹599</p>
+              <button>View Product</button>
+            </article>
+
+            <article class="product-card" onclick="showProduct(5)">
+              <img
+                src="./img/Handmade Floral Rangoli Mats.jpeg"
+                alt="Handmade Floral Rangoli Mats"
+              />
+              <h3>Handmade Floral Rangoli Mats</h3>
+              <p>₹400</p>
+              <button>View Product</button>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section id="about-section" class="about">
+        <h2>About</h2>
+        <p>
+          We sell traditional Indian foods and handicrafts created by local
+          makers. Our goal is to support Indian artisans and provide authentic,
+          high-quality products.
+        </p>
+        
+        
+      </section>
+    </main>
+
+   
+
+    <main id="product-page" class="page">
+      <header>
+        <div class="nav-bar">
+          <button onclick="showPage('home-page')">Home</button>
+          <button onclick="showPage('about-section')">About</button>
+        </div>
+        <h1>Product Details</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+      </header>
+
+      <section class="product-detail">
+        <img id="detail-image" src="" alt="Selected product" />
+
+        <div class="detail-info">
+          <h2 id="detail-name">Product Name</h2>
+          <p id="detail-description">Product description</p>
+          <p id="detail-price" class="price">₹0</p>
+
+          <label for="quantity">Quantity</label>
+          <input id="quantity" type="number" value="1" min="1" />
+
+          <button onclick="buyNow()">Buy Now</button>
+          <button class="secondary-button" onclick="showPage('home-page')">
+            Back to Home
+          </button>
+        </div>
+      </section>
+    </main>
+
+    
+
+    
+   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="app.js"></script>
+  </body>
+</html>
